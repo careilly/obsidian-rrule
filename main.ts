@@ -34,22 +34,8 @@ export default class obsidianRRule extends Plugin {
     return rule.between(datetime(sy, sm, sd,0,0), datetime(ey, em, ed,23,59),true);
   }
 	async onload() {
-		await this.loadSettings();
+		//await this.loadSettings();
 
-    
-		// This creates an icon in the left ribbon.
-		const ribbonIconEl = this.addRibbonIcon('dice', 'Sample Plugin', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
-			new Notice('This is a notice!');
-		});
-		// Perform additional things with the ribbon
-		ribbonIconEl.addClass('my-plugin-ribbon-class');
-
-		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Status Bar Text');
-
-		// This adds a simple command that can be triggered anywhere
 		//this.addCommand({
 			//id: 'open-sample-modal-simple',
 			//name: 'Open sample modal (simple)',
